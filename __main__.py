@@ -9,7 +9,7 @@ import pygame
 import pygame.locals
 
 import conf
-import platform
+import platformer
 import ball
 
 
@@ -67,7 +67,7 @@ def main():
     screen  = pygame.display.set_mode((conf.WINDOW_WIDTH, conf.WINDOW_HEIGHT))
     main_clock = pygame.time.Clock()
 
-    platforms = [platform.Platform(conf.PLATFORMSEDGE, conf.WINDOW_HEIGHT/2, *conf.PLATFORMSSIZE, (0,0,0)), platform.Platform(conf.WINDOW_WIDTH-conf.PLATFORMSEDGE, conf.WINDOW_HEIGHT/2, *conf.PLATFORMSSIZE, (0,0,0))]
+    platforms = [platformer.Platform(conf.PLATFORMSEDGE, conf.WINDOW_HEIGHT/2, *conf.PLATFORMSSIZE, (0,0,0)), platformer.Platform(conf.WINDOW_WIDTH-conf.PLATFORMSEDGE, conf.WINDOW_HEIGHT/2, *conf.PLATFORMSSIZE, (0,0,0))]
     gameball = ball.Ball(conf.WINDOW_WIDTH/2,conf.WINDOW_HEIGHT/2,conf.BALLRADIUS, (0,0,0))
     
     if playerindex == 0:
